@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول والتسجيل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #34495e;
+            border-radius: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: #e74c3c;
+            color: white;
+            cursor: pointer;
+        }
+        .message {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>تسجيل الدخول</h2>
+        <input type="email" id="login-email" placeholder="البريد الإلكتروني">
+        <input type="password" id="login-password" placeholder="كلمة المرور">
+        <button onclick="login()">تسجيل الدخول</button>
+        <div class="message" id="login-message"></div>
+        <button onclick="showRegister()">ليس لديك حساب؟ سجل هنا</button>
+    </div>
+    
+    <div class="container" id="register-container" style="display:none;">
+        <h2>تسجيل حساب جديد</h2>
+        <input type="text" id="register-name" placeholder="الاسم">
+        <input type="email" id="register-email" placeholder="البريد الإلكتروني">
+        <input type="password" id="register-password" placeholder="كلمة المرور">
+        <button onclick="register()">تسجيل</button>
+        <div class="message" id="register-message"></div>
+        <button onclick="showLogin()">لديك حساب بالفعل؟ سجل الدخول هنا</button>
+    </div>
+
+    <div class="container" id="welcome-container" style="display:none;">
+        <h2>مرحبًا بك</h2>
+        <div id="welcome-message"></div>
+        <button onclick="logout()">تسجيل الخروج</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
